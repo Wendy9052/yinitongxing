@@ -1,0 +1,75 @@
+html {
+  font-size: 62.5%;
+}
+.page-ft {
+  position: fixed;
+  min-height: 48px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.page-ft::before {
+  border-top-color: #e4e4e4;
+  z-index: 101;
+}
+.page-ft .weui-btn {
+  border-radius: 0;
+  line-height: 2.66666666;
+}
+.page-ft .weui-btn::after {
+  border-radius: 0;
+  border-width: 0;
+}
+.page-ft .weui-btn .iconfont {
+  font-size: 2.4rem;
+  vertical-align: -3px;
+}
+.page-ft.radius-btn {
+  padding: 10px;
+  background: #fbf9fe;
+}
+.page-ft.radius-btn .weui-btn {
+  border-radius: 5px;
+}
+.idcardupload {
+  padding: 15px 40px;
+}
+.idcardupload .upload-box {
+  margin: 10px 10px 20px;
+}
+.idcardupload .upload-box .upload-img {
+  background-image: url('~@/assets/sfzbg01.png'), url('~@/assets/sfzbg02.png'), url('~@/assets/sfzbg03.png'), url('~@/assets/sfzbg04.png');
+  background-position: left top, right top, right bottom, left bottom;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding: 20px;
+}
+.idcardupload .upload-box .upload-img img {
+  width: 100%;
+  vertical-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+}
+.idcardupload .upload-box .upload-img .upload-img-b {
+  width: 100%;
+  height: 0;
+  padding-top: 63%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+}
+.idcardupload .upload-box .upload-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #666;
+}
+.idcardupload .upload-box .upload-notes {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #888;
+}
+/*# sourceMappingURL=./global.css.map */

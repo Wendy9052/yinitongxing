@@ -1,0 +1,259 @@
+html {
+font-size: 62.5%
+}
+// body {
+//   background-color: #fbf9fe;
+// }
+// html,
+// body {
+//   height: 100%;
+//   width: 100%;
+//   overflow-x: hidden;
+// }
+// .router-view {
+//   width: 100%;
+// }
+
+.page-ft {
+  position: fixed; min-height: 48px; width: 100%; left: 0; bottom: 0; z-index: 3000;
+  &::before {
+    border-top-color: #e4e4e4; z-index: 101; .t-line;
+  }
+  &.radius-btn {
+    padding: 10px; background: #fbf9fe;
+    .weui-btn {
+      border-radius: 5px;
+    }
+  }
+}
+
+.van-overlay {
+  background-color: fade(#000, 30%);
+}
+
+/*banner*/
+.banner {
+    position: relative; max-width: 1024px; margin: 0 auto;
+    .banner-img {
+        img { vertical-align: middle; width: 100%;}
+    }
+    .banner-t {
+        position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 10px; line-height: 20px; font-size: 15px;
+        color: #fff; background-color: rgba(0,0,0,0.6);
+    }
+}
+
+// 图片上传
+.img-uploaded {
+  position: relative; padding: 10px 5px; overflow: hidden;
+  .uploaded-t {
+    padding: 0 10px 10px; font-size: 15px;
+    span.warn {
+      color: @red;
+    }
+  }
+  .item {
+    width: 33.33%; float: left; position: relative; box-sizing: border-box; padding: 10px;
+    .temp-pic {
+      position: relative; width: 100%; height: 0; padding-top: 100%;
+      img {
+        display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; object-fit: contain; background: #eee; border-radius: 4px;
+      }
+      .badge {
+        position: absolute; top: 0; left: 0; padding: 2px 5px; border-radius: 0 0 5px 0; color: #fff; line-height: 1.3;
+        &.success {
+          background: fade(@green,80%)
+        }
+        &.warn {
+          background: fade(@red,70%)
+        }
+        &.waitting {
+          background: fade(@orange,70%)
+        }
+      }
+      .vux-x-icon {
+        position: absolute; top: -8px; right: -8px; fill: fade(@red,70%);
+      }
+    }
+    .temp-t {
+      font-size: 1.4rem; line-height: 24px; height: 24px; padding: 5px 5px 0;
+    }
+  }
+}
+
+//身份证拍摄
+.idcardupload {
+  padding: 15px 40px;
+  .upload-box {
+    margin: 10px 10px 20px;
+    .upload-img {
+      background-image: url('~@/assets/sfzbg01.png'), 
+        url('~@/assets/sfzbg02.png'), url('~@/assets/sfzbg03.png'),
+        url('~@/assets/sfzbg04.png');
+      background-position: left top, right top, right bottom, left bottom;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      padding: 20px;
+      img {
+        width: 100%;
+        vertical-align: center;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+      }
+      .upload-img-b {
+        width: 100%; height: 0; padding-top: 63%; background-position: center center; background-repeat: no-repeat; background-size: contain; background-color: #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.075); border-radius: 5px;
+      }
+    }
+    .upload-title {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #666;
+    }
+    .upload-notes {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #888;
+    }
+  }
+}
+
+.shadow-box {
+  box-sizing: border-box;
+  margin: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px 0px rgba(3, 121, 255, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  // .van-cell-group__title {
+  //   background: @yellow; color: #fff;
+  // }
+}
+
+.progress-list {
+  .progress-title {
+    font-size: 16px; font-weight: bold; color: #333; padding: 10px 0;
+  }
+  .list-cell {
+    color: #999;
+    .display-flex;
+    .cell-time {
+      font-size: 12px; white-space: nowrap; text-align: right; width: 75px;
+    }
+    .cell-point {
+      width: 32px; position: relative;
+      &::after {
+        content: ''; display: block; position: absolute; width: 1px; left: 50%; top: 0; bottom: 0; background-color: #d8d8d8; z-index: 1;
+      }
+      .van-icon {
+        position: absolute; left: 50%; top: 0; margin-left: -8px; z-index: 2; color: @red; background-color: #fff; border-radius: 100%;
+      }
+      .point {
+        position: absolute; left: 50%; top: 6px; margin-left: -3px; width: 7px; height: 7px; border-radius: 100%; background: #d8d8d8;
+      }
+    }
+    .cell-cont {
+      .flex-1; min-width: 0;
+      .cell-title {
+        font-size: 14px;
+      }
+      .cell-desc {
+        font-size: 13px; padding-bottom: 20px;
+      }
+    }
+    &:first-child {
+      color: #333;
+      .cell-cont {
+        .cell-title {
+          font-size: 15px;
+        }
+      }
+    }
+    &:last-child {
+      padding-bottom: 10px;
+      .cell-point {
+        &::after {
+          bottom: auto; height: 8px;
+        }
+      }
+    }
+  }
+}
+
+.msg-page {
+  overflow: hidden; background: @gradient-white;
+  .msg-hd {
+    text-align: center; margin: 30px 30px 20px;
+    .van-icon {
+      &.success {
+        color: @green;
+      }
+      &.info {
+        color: @blue;
+      }
+      &.warn {
+        color: @yellow;
+      }
+      &.error {
+        color: @red;
+      }
+    }
+    .msg-png {
+      width: 240px; margin: 0 auto; height: 105px;
+      img{
+        width: 100%; display: block;
+      }
+    }
+  }
+  .msg-bd {
+    text-align: center; margin: 20px 15% 30px; overflow: hidden; 
+    .title {
+      font-size: 18px; color: #000; margin-bottom: 15px;
+    }
+    .desc {
+      text-align: justify; text-align-last: left; font-size: 14px; color: #999; margin-bottom: 30px;
+    }
+  }
+  .msg-ft {
+    margin: 30px 20%;
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+  .msg-tips {
+    color: #999; text-align: center; margin: 10px 5% 10px; padding: 5px; font-size: 14px;
+  }
+}
+
+/* 文章详情 */
+.article {
+  padding: 10px 0 30px; max-width: 677px; margin: auto;
+  &.article-panel {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); max-width: 1000px; margin: auto; border-radius: 5px;
+  }
+	.article-title {
+		overflow: hidden; padding: 0 15px; margin-bottom: 15px; border-bottom: #eee solid 1px;
+		h2 { font-size: 2rem; font-weight: normal; line-height: 1.4; margin-bottom: 10px;}
+	}
+	.article-info {
+    color: #999999; line-height: 24px; margin-bottom: 20px; text-align: center; font-size: 14px;
+    span { margin: 0 5px;}
+		a { margin: 0 5px; color: #cc0000; font-size: 14px; }
+	}
+	.article-c {
+		font-size: 1.5rem; line-height: 1.5; overflow: hidden; color: #444; margin: 0 15px; text-align: justify; text-align-last: left;
+		img,p img { max-width: 100% !important; height: auto !important;}
+  }
+  .article-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: @gradient-white-b;
+    z-index: 99;
+    padding: 20px;
+    box-sizing: border-box;
+    .van-button {
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03);
+    }
+  }
+}
